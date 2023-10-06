@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../exercise1.css">
+    <title>My Biography</title>
+    <style>
+            <style>
+    /* Reset some default styles */
+    body, h1, h2, p, ul, li {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: 'Helvetica', Arial, sans-serif; /* Change the font family */
+        background-color: #f8f8f8; /* Change the background color */
+    }
+
+    header {
+        background-color: #007bff; /* Change the header background color */
+        color: #fff;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    header h1 {
+        font-size: 48px; /* Increase the font size */
+    }
+
+    section {
+        background-color: #fff;
+        padding: 20px;
+        margin: 20px;
+        border-radius: 10px; /* Increase the border radius */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Increase the box shadow */
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px; /* Increase the margin top */
+    }
+
+    th, td {
+        padding: 12px 16px; /* Increase the padding */
+        text-align: left;
+    }
+
+    th {
+        background-color: #007bff;
+        color: #fff;
+    }
+
+    form {
+        margin-top: 20px;
+    }
+
+    label, input, textarea {
+        margin-bottom: 15px; /* Increase the margin bottom */
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 5px; /* Increase the border radius */
+    }
+
+    input[type="submit"] {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 12px 24px; /* Increase the padding */
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #0056b3; /* Change the hover color */
+    }
+
+    footer {
+        text-align: center;
+        background-color: #007bff;
+        color: #fff;
+        padding: 15px 0;
+    }
+</style>
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Biography</h1>
+    </header>
+
+    <section id="personal-info">
+        <h2>Personal Information</h2>
+        <table>
+            <tr>
+                <th>Name:</th>
+                <td>Maneet Pal Singh</td>
+            </tr>
+            <tr>
+                <th>Age:</th>
+                <td>24</td>
+            </tr>
+            <tr>
+                <th>Location:</th>
+                <td>Toronto</td>
+            </tr>
+        </table>
+    </section>
+
+    <section id="education">
+        <h2>Education</h2>
+        <p>I have a bachelor degree in ECE from GNDU,India. I am currently pursuring my Post-Diploma Certificate from Lambton College, Toronto. </p>
+    </section>
+
+    <section id="work-experience">
+        <h2>Work Experience</h2>
+        <p>I have in total of 1.5 Years of experince. I worked as a IOT intern at Sabudh, Chandigarh. After that I joined Volkswagen as Software Engineer.</p>
+    </section>
+
+    <section id="contact-form">
+        <h2>Contact Me</h2>
+        <form action="contact.php" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Maneet Pal Singh</p>
+    </footer>
+</body>
+</html>
