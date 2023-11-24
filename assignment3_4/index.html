@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Currency Converter</title>
+</head>
+<body>
+    <div class="converter-container">
+        <div class="cb-1"><h1 class="ab-1">Currency Converter</h1></div>
+        <div class="aa-1">
+            <label for="cadInput">Enter Canadian Dollars (CAD): </label>
+            <input type="number" id="cadInput"  placeholder="Enter amount in CAD">
+
+            <button onclick="convertToUSD()" class="cs-1"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1200px-Flag_of_the_United_States.svg.png" height="40%" width="40%"> USD</button>
+        
+            <p id="resultUSD"></p>
+        </div>
+        <div class="aa-2">
+            <label for="usdInput">Enter US Dollars (USD): </label>
+            <input type="number" id="usdInput" placeholder="Enter amount in USD">
+
+            <button onclick="convertToCAD()" class="cs-1"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/cf/Flag_of_Canada.svg/1280px-Flag_of_Canada.svg.png" height="40%" width="40%">
+                CAD</button>
+        
+            <p id="resultCAD"></p>
+        </div>
+        
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
