@@ -12,57 +12,60 @@
 
     <script language="javascript">
         function generateTable() {
-            var numRows = document.getElementById("t1").value;
-            var numCols = document.getElementById("t2").value;
+    var numRows = document.getElementById("t1").value;
+    var numCols = document.getElementById("t2").value;
 
-            var table = document.createElement("table");
+    var table = document.createElement("table");
+    table.style.borderCollapse = "collapse"; // Add this line to set border-collapse property
 
-            for (var i = 0; i < numRows; i++) {
-                var row = table.insertRow(i);
-                for (var j = 0; j < numCols; j++) {
-                    var cell = row.insertCell(j);
-                    cell.innerHTML = "Row " + (i + 1) + " Col " + (j + 1) + ", ";
-                }
-            }
-
-            var existingTable = document.querySelector("table");
-            if (existingTable) {
-                existingTable.parentNode.removeChild(existingTable);
-            }
-
-            document.body.removeChild(document.getElementById("t1").previousSibling);
-            document.body.removeChild(document.getElementById("t1"));
-            document.body.removeChild(document.getElementById("t2").previousSibling);
-            document.body.removeChild(document.getElementById("t2"));
-
-
-            document.getElementById("b1").style.display = "none";
-
-            document.getElementById("b2").style.display = "inline";
-            document.getElementById("b3").style.display = "inline";
-
-            document.body.appendChild(table);
+    for (var i = 0; i < numRows; i++) {
+        var row = table.insertRow(i);
+        for (var j = 0; j < numCols; j++) {
+            var cell = row.insertCell(j);
+            cell.style.border = "1px solid black"; // Add this line to set cell borders
+            cell.innerHTML = "Row " + (i + 1) + " Col " + (j + 1);
         }
+    }
 
-        function addColumn() {
-            var table = document.querySelector("table");
-            var numRows = table.rows.length;
+    var existingTable = document.querySelector("table");
+    if (existingTable) {
+        existingTable.parentNode.removeChild(existingTable);
+    }
 
-            for (var i = 0; i < numRows; i++) {
-                var cell = table.rows[i].insertCell(-1);
-                cell.innerHTML = "New Col";
-            }
-        }
+    document.body.removeChild(document.getElementById("t1").previousSibling);
+    document.body.removeChild(document.getElementById("t1"));
+    document.body.removeChild(document.getElementById("t2").previousSibling);
+    document.body.removeChild(document.getElementById("t2"));
 
-        function addRow() {
-            var table = document.querySelector("table");
-            var numCols = table.rows[0].cells.length;
-            var newRow = table.insertRow(-1);
+    document.getElementById("b1").style.display = "none";
+    document.getElementById("b2").style.display = "inline";
+    document.getElementById("b3").style.display = "inline";
 
-            for (var i = 0; i < numCols; i++) {
-                var cell = newRow.insertCell(i);
-                cell.innerHTML = "New Row";
-            }
-        }
+    document.body.appendChild(table);
+}
+
+function addColumn() {
+    var table = document.querySelector("table");
+    var numRows = table.rows.length;
+
+    for (var i = 0; i < numRows; i++) {
+        var cell = table.rows[i].insertCell(-1);
+        cell.style.border = "1px solid black"; // Add this line to set cell borders
+        cell.innerHTML = "New Col";
+    }
+}
+
+function addRow() {
+    var table = document.querySelector("table");
+    var numCols = table.rows[0].cells.length;
+    var newRow = table.insertRow(-1);
+
+    for (var i = 0; i < numCols; i++) {
+        var cell = newRow.insertCell(i);
+        cell.style.border = "1px solid black"; // Add this line to set cell borders
+        cell.innerHTML = "New Row";
+    }
+}
+
     </script>
 </html>
